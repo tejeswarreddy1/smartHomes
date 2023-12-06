@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Smart Home Dashboard</title>
+    <script>
+        function lightOn()
+        {
+        var img = document.getElementById("light");
+        img.src="images/Light_On.png";
+        return false;
+        }
+        function lightOff()
+        {
+        var img = document.getElementById("light");
+        img.src="images/Light_Off.png";
+        return false;
+        }
+        function lightDim()
+        {
+        var img = document.getElementById("light");
+        img.src="images/Light_Dim.png";
+        return false;
+        }
+        function tvOff()
+        {
+        var img = document.getElementById("TV");
+        img.src="images/TV_Off.png";
+        return false;
+        }
+        function tvOn()
+        {
+        var img = document.getElementById("TV");
+        img.src="images/TV_On.png";
+        return false;
+        }
+        function musicOff()
+        {
+        var img = document.getElementById("music");
+        img.src="images/Music_Pause.png";
+        return false;
+        }
+        function musicOn()
+        {
+        var img = document.getElementById("music");
+        img.src="images/Music_Play.png";
+        return false;
+        }
+    </script>
+</head>
+<body>
+<div class="dashboard">
+    <div class="section lights">
+        <h2>Lights Control</h2>
+        <!-- Add light controls -->
+        <button class="control" onclick="lightOn()">Turn On</button>
+        <button class="control" onclick="lightOff()">Turn Off</button>
+        <button class="control" onclick="lightDim()">Dim</button>
+    </div>
+    <br></br>
+    <div class="light">
+        <img id="light" src="images/Light_Off.png" width="150" height="150"/>
+    </div>
+    <div class="section temperature">
+        <h2>Temperature Control</h2>
+        <!-- Add temperature controls -->
+        <input type="range" class="control" min="18" max="30" value="22">
+        <span class="control">Current Temperature: 22°C</span>
+    </div>
+    <div class="section Television">
+        <h2>Television Control</h2>
+        <!-- Add Television controls -->
+        <button class="control" onclick="tvOn()">ON</button>
+        <button class="control" onclick="tvOff()">OFF</button>
+    </div>
+    <br> </br>
+     <div class="TV">
+        <img id="TV" src="images/TV_Off.png" width="200" height="150"/>
+    </div>
+    <div class="section music">
+        <h2>Music Control</h2>
+        <!-- Add music controls -->
+        <button class="control" onclick="musicOn()">Play</button>
+        <button class="control" onclick="musicOff()">Pause</button>
+        <button class="control">Next</button>
+    </div>
+    <br> </br>
+    <div class="music">
+        <img id="music" src="images/Music_Pause.png" width="200" height="120"/>
+    </div>
+    <div class="section Air conditioner">
+        <h2>Air conditioner Control</h2>
+        <!-- Add Air conditioer controls -->
+        <button class="control">ON</button>
+        <button class="control">OFF</button>
+    </div>
+</div>
+</body>
+</html>
